@@ -2,7 +2,7 @@ import json
 import logging
 import pickle
 
-from stay_area.baseline.rule_based.utils1 import search_cand_interval, test_method
+from utils1 import search_cand_interval, test_method
 from cal_distance import distance
 
 
@@ -62,10 +62,10 @@ def SHInf(traj_data,aoiwithgrid,grid2aoi,grid_map,node2gps,car_aoi_pinlv):
                     total_truth_list.append(cur_aoi_id)
         logging.info("finish traj : {%d}", iiii)
         iiii += 1
-    with open("/extern1/dxy/all/stay_area/baseline/rule_based/data/VHInf/pred_list.json", "w") as f:
+    with open("./data/VHInf/pred_list.json", "w") as f:
         json.dump(total_pred_id, f)
         f.close()
-    with open("/extern1/dxy/all/stay_area/baseline/rule_based/data/VHInf/truth_id.json", "w") as f:
+    with open("./VHInf/truth_id.json", "w") as f:
         json.dump(total_truth_list, f)
         f.close()
     test_method(total_truth_list, total_pred_id, node2gps)
@@ -74,35 +74,29 @@ if __name__ == '__main__':
                         format="[%(filename)s:%(lineno)s %(funcName)s()] -> %(message)s",
                         handlers=[
                             logging.FileHandler(
-                                '/extern1/dxy/all/stay_area/log/baseline/rule_based/VHInf/0120_VHInf.log',
+                                './log/VHInf/0120_VHInf.log',
                                 mode='w'),
                             logging.StreamHandler()]
                         )
 
-    # with open("/extern1/dxy/all/stay_area/data/prepared_data/CSS/test/test_data_tmp.json", "r") as f:
-    #     traj_data = json.load(f)
-    #     f.close()
-    # with open("/extern1/dxy/all/stay_area/data/AOI/1104/aoi_with_grid_1104.json", "r") as f:
-    #     aoiwithgrid = json.load(f)
-    #     f.close()
-    # with open("/extern1/dxy/all/stay_area/data/AOI/1104/grid2aoi.json", "r") as f:
-    #     grid2aoi = json.load(f)
-    #     f.close()
-    # with open("/extern1/dxy/all/stay_area/data/AOI/1104/grid_map.pkl", "rb") as f:
-    #     grid_map = pickle.load(f)
-    #     f.close()
-    with open("/extern1/dxy/all/stay_area/data/AOI/1104/aoi2gps_taian.json", "r") as f:
+    with open("./data/CSS/test/test_data_tmp.json", "r") as f:
+        traj_data = json.load(f)
+        f.close()
+    with open("./data/AOI/aoi_with_grid.json", "r") as f:
+        aoiwithgrid = json.load(f)
+        f.close()
+    with open("./data/AOI/grid2aoi.json", "r") as f:
+        grid2aoi = json.load(f)
+        f.close()
+    with open("./data/AOI/grid_map.pkl", "rb") as f:
+        grid_map = pickle.load(f)
+        f.close()
+    with open("./data/AOI/aoi2gps_taian.json", "r") as f:
         node2gps = json.load(f)
         f.close()
-    # with open("/extern1/dxy/all/stay_area/data/AOI/1104/car_aoi_pinlv.json","r") as f:
-    #     car_aoi_pinlv=json.load(f)
-    #     f.close()
-    # logging.info("finish read data")
-    # SHInf(traj_data,aoiwithgrid,grid2aoi,grid_map,node2gps,car_aoi_pinlv)
-    with open("/extern1/dxy/all/stay_area/baseline/rule_based/data/VHInf/pre_list_new.json", "r") as f:
-        total_pred_id=json.load(f)
+    with open("./data/AOI/car_aoi_appear_time.json","r") as f:
+        car_aoi_pinlv=json.load(f)
         f.close()
-    with open("/extern1/dxy/all/stay_area/baseline/rule_based/data/VHInf/truth_id.json", "r") as f:
-        total_truth_list=json.load(f)
-        f.close()
-    test_method(total_truth_list, total_pred_id, node2gps)
+    logging.info("finish read data")
+    SHInf(traj_data,aoiwithgrid,grid2aoi,grid_map,node2gps,car_aoi_pinlv)
+    

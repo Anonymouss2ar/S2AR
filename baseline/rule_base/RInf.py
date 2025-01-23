@@ -5,7 +5,7 @@ import random
 import sys
 
 from utils1 import search_candidate_mid, test_method
-# sys.path.append('/extern1/dxy/all/')
+
 
 def RInf(traj_data,aoiwithgrid,grid2aoi,grid_map,node2gps):
     total_key_list = list(traj_data.keys())

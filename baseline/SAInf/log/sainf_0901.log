@@ -1,0 +1,15 @@
+[trainer.py:47 <module>()] -> finish data load
+[trainer.py:60 <module>()] -> train
+[stayNet.py:206 train_epoch()] -> total tokens: 10900
+[stayNet.py:231 train_epoch()] -> Epoch Step: 0 Loss: 0.075186 mean loss: 0.075186
+[stayNet.py:231 train_epoch()] -> Epoch Step: 200 Loss: 0.057336 mean loss: 0.060839
+[stayNet.py:231 train_epoch()] -> Epoch Step: 400 Loss: 0.015480 mean loss: 0.048142
+[stayNet.py:231 train_epoch()] -> Epoch Step: 600 Loss: 0.019220 mean loss: 0.039525
+[stayNet.py:231 train_epoch()] -> Epoch Step: 800 Loss: 0.008458 mean loss: 0.033910
+[stayNet.py:231 train_epoch()] -> Epoch Step: 1000 Loss: 0.017927 mean loss: 0.030756
+[stayNet.py:231 train_epoch()] -> Epoch Step: 1200 Loss: 0.015881 mean loss: 0.028251
+[stayNet.py:231 train_epoch()] -> Epoch Step: 1400 Loss: 0.032521 mean loss: 0.026437
+[stayNet.py:231 train_epoch()] -> Epoch Step: 1600 Loss: 0.027084 mean loss: 0.025058
+[stayNet.py:231 train_epoch()] -> Epoch Step: 1800 Loss: 0.026436 mean loss: 0.024042
+[stayNet.py:231 train_epoch()] -> Epoch Step: 2000 Loss: 0.015338 mean loss: 0.023284
+[stayNet.py:231 train_epoch()] -> Epoch Step: 2200 Loss: 0.036966 mean loss: 0.022483

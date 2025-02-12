@@ -1,0 +1,1 @@
+{"grid_x": {"grid_y1": ["grid_id_int", ["lon_float", "lat_float"], "grid_x_int", "grid_y_int", {"poi_1":"tf_idf", "poi_2":"tf_idf", "poi_3":"tf_idf"}], "grid_y2": ["grid_id_int", ["lon_float", "lat_float"], "grid_x_int", "grid_y_int", {"poi_1":"tf_idf", "poi_2":"tf_idf", "poi_3":"tf_idf"}]}}

@@ -1,0 +1,1 @@
+Due to the Non-disclosure Agreement (NDA), we are unable to publicly disclose the vehicle trajectories collected from Camera Surveillance System and Vehicle Tracking System respectively. Therefore, we have constructed sample data to facilitate users' understanding of our data format.
